@@ -210,19 +210,66 @@ form .name-details .field:last-child{
 }
 
 .users-list{
+    max-height: 350px;
+    overflow-y: auto;
+}
 
+.users-list::-webkit-scrollbar{
+    width: 0;
 }
 
 .users-list a{
+    margin-bottom: 15px;
+    page-break-after: 10px;
     padding-right: 15px;
+    border-bottom-color: #f1f1f1;
 }
 
-.users-list a img{
+.users-list a:last-child{
+    border: none;
+    margin-bottom: 0px;
+}
+
+.users-list a .content img{
     height: 40px;
     width: 40px;
+}
+
+.users-list a .content p{
+    color: #67676a;
 }
 
 .users-list a .status-dot{
     font-size: 12px;
     color: #468669;
+}
+
+/* ***** *  USE THIS CLASS IN PHP WHEN OFFLINE  * ***** */
+.users-list a .status-dot .offline{
+    counter-reset: #ccc;
+}
+
+
+/* **************** *  CHAT AREA  * **************** */
+
+.chat-area header{
+    display: flex;
+    align-items: center;
+    padding: 18px 30px;
+}
+
+.chat-area header .back-icon{
+    font-size: 18px;
+    color: #333;
+}
+
+.chat-area header img{
+    height: 45px;
+    width: 45px;
+    margin: 0 15px;
+}
+
+.chat-area header span{
+    font-size: 17px;
+    
 }
