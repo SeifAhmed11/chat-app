@@ -17,12 +17,12 @@
     <div class="wrapper">
         <section class="form signup">
             <header>Realtime Chat App</header>
-            <form action="#">
+            <form action="php/signup.php" method="post">
                 <div class="error-txt">this is error</div>
                 <div class="name-details">
                     <div class="field input">
                         <label for="">Frist Name</label>
-                        <input type="text" placeholder="Frist Name">
+                        <input name="username" type="text" placeholder="Frist Name">
                     </div>
                     <div class="field input">
                         <label for="">Last Name</label>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="field input">
                     <label for="">Password</label>
-                    <input type="password" placeholder="Enter new password">
+                    <input name="password" type="password" placeholder="Enter new password">
                     <div class="when-click">
                         <i class="fas fa-eye"></i>
                     </div>
@@ -53,6 +53,7 @@
     </div>
 
     <script src="javascript/pass-show-hide.js"></script>
+    <script src="javascript/signup.js"></script>
 </body>
 
 </html>

@@ -7,7 +7,6 @@ toggleBtn.onclick = () => {
     if (pswrdField.type == "password") {
         pswrdField.type = "text";
         whenClick.classList.add("active");
-        console.log("done");
     } else {
         pswrdField.type = "password";
         whenClick.classList.remove("active");
