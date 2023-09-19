@@ -101,6 +101,10 @@
                     </div>
                 </div>
             </div>
+            <form action="#" class="typing-area">
+                <input type="text" placeholder="Type a message here...">
+                <button><i class="fab fa-telegram-plane"></i></button>
+            </form>
         </section>
     </div>
 </body>

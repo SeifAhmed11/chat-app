@@ -1,8 +1,7 @@
 /* **************** *  PUBLIC  * **************** */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,7 +9,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,33 +17,32 @@ body{
     background: #f7f7f7;
 }
 
-.wrapper{
+.wrapper {
     background: #fff;
     width: 450px;
     border-radius: 16px;
-    box-shadow: 0 0 120px 0 rgba(0, 0, 0, 0.1),
-                0 32px 64px -48px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 120px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
 }
 
 
 /* **************** *  SIGNUP AND LOGIN FORM CSS CODE  * **************** */
 
-.form{
+.form {
     padding: 25px 30px;
 }
 
-.form header{
+.form header {
     font-size: 25px;
     font-weight: 600;
     padding-bottom: 10px;
     border-bottom: 1px solid#e6e6e6;
 }
 
-.form form{
-    margin:20px 0;
+.form form {
+    margin: 20px 0;
 }
 
-.form form .error-txt{
+.form form .error-txt {
     color: #721c24;
     background: #f8d7da;
     padding: 8px 10px;
@@ -52,32 +50,33 @@ body{
     border-radius: 5px;
     margin-bottom: 10px;
     border: 1px solid #f5c6cb;
+    display: none;
 }
 
-.form form .name-details{
+.form form .name-details {
     display: flex;
 }
 
-form .name-details .field:first-child{
+form .name-details .field:first-child {
     margin-right: 10px;
 }
 
-form .name-details .field:last-child{
+form .name-details .field:last-child {
     margin-left: 10px;
 }
 
-.form form .field{
+.form form .field {
     display: flex;
     flex-direction: column;
     position: relative;
     margin-bottom: 10px;
 }
 
-.form form .field label{
+.form form .field label {
     margin-bottom: 2px;
 }
 
-.form form .input input{
+.form form .input input {
     height: 40px;
     width: 100%;
     font-size: 16px;
@@ -86,11 +85,11 @@ form .name-details .field:last-child{
     border-radius: 5px;
 }
 
-.form form .iamge input{
+.form form .iamge input {
     font-size: 17px;
 }
 
-.form form .button input{
+.form form .button input {
     margin-top: 13px;
     height: 45px;
     border: none;
@@ -102,7 +101,7 @@ form .name-details .field:last-child{
     cursor: pointer;
 }
 
-.form form .field i{
+.form form .field i {
     position: absolute;
     right: 15px;
     color: #ccc;
@@ -111,29 +110,33 @@ form .name-details .field:last-child{
     cursor: pointer;
 }
 
-.form .link{
+.field .active i {
+    color: #333 !important;
+}
+
+.form .link {
     text-align: center;
     margin: 10px 0;
     font-size: 17px;
 }
 
-.form .link a{
-    color:#333;
+.form .link a {
+    color: #333;
 }
 
-.form .link a:hover{
+.form .link a:hover {
     text-decoration: underline;
 }
 
 
 /* **************** *  USERS AREA CSS CODE  * **************** */
 
-.users{
+.users {
     padding: 25px 30px;
 }
 
 .users header,
-.users-list a{
+.users-list a {
     display: flex;
     align-items: center;
     padding-bottom: 20px;
@@ -141,32 +144,35 @@ form .name-details .field:last-child{
     border-bottom: 1px solid #e6e6e6;
 }
 
-.wrapper img{
+.wrapper img {
     object-fit: cover;
     border-radius: 50%;
 }
 
-:is(.users, .users-list) .content{
+:is(.users,
+.users-list) .content {
     display: flex;
     align-items: center;
 }
 
-.users header .content img{
+.users header .content img {
     height: 50px;
     width: 50px;
 }
 
-:is(.users, .users-list) .datails{
+:is(.users,
+.users-list) .datails {
     color: #000;
     margin-left: 15px;
 }
 
-:is(.users, .users-list) .details span{
+:is(.users,
+.users-list) .details span {
     font-size: 18px;
     font-weight: 500;
 }
 
-.users header .logout{
+.users header .logout {
     color: #fff;
     font-size: 17px;
     padding: 7px 15px;
@@ -174,7 +180,7 @@ form .name-details .field:last-child{
     border-radius: 5px;
 }
 
-.users .search{
+.users .search {
     margin: 20px 0;
     display: flex;
     position: relative;
@@ -182,151 +188,197 @@ form .name-details .field:last-child{
     justify-content: space-between;
 }
 
-.users .search .text{
+.users .search .text {
     font-size: 18px;
 }
 
-.users .search input{
+.users .search input {
     position: absolute;
     height: 42px;
     width: calc(100% - 50px);
-    border: 1px solid #ccc; 
+    border: 1px solid #ccc;
     padding: 0 13px;
     font-size: 16px;
     border-radius: 5px 0 0 5px;
     outline: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
 }
 
-.users .search button{
+.users .search input.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.users .search button {
     width: 47px;
     height: 42px;
     border: none;
     outline: none;
-    color: #fff;
-    background: #333;
+    color: #333;
+    background: #fff;
     cursor: pointer;
     font-size: 17px;
     border-radius: 0 5px 5px 0;
+    transition: all 0.3s ease;
 }
 
-.users-list{
+.users .search button.active {
+    color: #ffffff;
+    background: #333;
+}
+
+.users .search button.active i::before{
+    content: "\f00d";
+}
+
+.users-list {
     max-height: 350px;
     overflow-y: auto;
 }
 
-.users-list::-webkit-scrollbar{
+:is(.users-list,
+.chat-box)::-webkit-scrollbar {
     width: 0;
 }
 
-.users-list a{
+.users-list a {
     margin-bottom: 15px;
     page-break-after: 10px;
     padding-right: 15px;
     border-bottom-color: #f1f1f1;
 }
 
-.users-list a:last-child{
+.users-list a:last-child {
     border: none;
     margin-bottom: 0px;
 }
 
-.users-list a .content img{
+.users-list a .content img {
     height: 40px;
     width: 40px;
 }
 
-.users-list a .content p{
+.users-list a .content p {
     color: #67676a;
 }
 
-.users-list a .status-dot{
+.users-list a .status-dot {
     font-size: 12px;
     color: #468669;
 }
 
+
 /* ***** *  USE THIS CLASS IN PHP WHEN OFFLINE  * ***** */
-.users-list a .status-dot .offline{
+
+.users-list a .status-dot .offline {
     counter-reset: #ccc;
 }
 
 
 /* **************** *  CHAT AREA  * **************** */
 
-.chat-area header{
+.chat-area header {
     display: flex;
     align-items: center;
     padding: 18px 30px;
 }
 
-.chat-area header .back-icon{
+.chat-area header .back-icon {
     font-size: 18px;
     color: #333;
 }
 
-.chat-area header img{
+.chat-area header img {
     height: 45px;
     width: 45px;
     margin: 0 15px;
 }
 
-.chat-area header span{
+.chat-area header span {
     font-size: 17px;
     font-weight: 500;
 }
 
-.chat-box{
-    height: 500px;
+.chat-box {
+    height: 450px;
     background: #f7f7f7;
     overflow-y: auto;
     padding: 10px 30px 20px 30px;
-    box-shadow: inset 0 32px 32px -32px rgba(0 0 0 / 5%),
-                inset 0 -32px 32px -32px rgba(0 0 0 / 5%);
+    box-shadow: inset 0 32px 32px -32px rgba(0 0 0 / 5%), inset 0 -32px 32px -32px rgba(0 0 0 / 5%);
 }
 
-.chat-box .chat{
+.chat-box .chat {
     margin: 15px 0;
 }
 
-.chat-box .chat p{
+.chat-box .chat p {
     padding: 8px 16px;
     word-wrap: break-word;
-    box-shadow: 0 0 32px rgba(0 0 0 / 8%),
-                0 16px 16px -16px rgba(0 0 0 / 10%);
+    box-shadow: 0 0 32px rgba(0 0 0 / 8%), 0 16px 16px -16px rgba(0 0 0 / 10%);
 }
 
-.chat-box .outgoing{
+.chat-box .outgoing {
     display: flex;
 }
 
-.outgoing .details{
+.outgoing .details {
     margin-left: auto;
     max-width: calc(100% - 130px);
 }
 
-.outgoing .details p{
+.outgoing .details p {
     background: #333;
     color: #fff;
     border-radius: 18px 18px 0 18px;
 }
 
-.chat-box .incoming{
+.chat-box .incoming {
     display: flex;
     align-items: flex-end;
 }
 
-.chat-box .incoming img{
+.chat-box .incoming img {
     height: 35px;
     width: 35px;
 }
 
-.incoming .details{
+.incoming .details {
     margin-left: 10px;
     margin-right: auto;
     max-width: calc(100% - 130px);
 }
 
-.incoming .details p{
+.incoming .details p {
     color: #333;
     background: #fff;
     border-radius: 18px 18px 18px 0px;
+}
+
+.chat-area .typing-area {
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.typing-area input {
+    height: 45px;
+    width: calc(100% - 58px);
+    font: 17px;
+    border: 1px solid #ccc;
+    padding: 0 13px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.typing-area button {
+    width: 55px;
+    border: none;
+    outline: none;
+    background: #333;
+    color: #fff;
+    font-size: 19px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
 }
