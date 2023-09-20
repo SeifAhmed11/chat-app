@@ -17,38 +17,38 @@
     <div class="wrapper">
         <section class="form signup">
             <header>Realtime Chat App</header>
-            <form action="php/signup.php" method="post">
-                <div class="error-txt">this is error</div>
+            <form action="#" enctype="multipart/form-data">
+                <div class="error-txt"></div>
                 <div class="name-details">
                     <div class="field input">
                         <label for="">Frist Name</label>
-                        <input name="username" type="text" placeholder="Frist Name">
+                        <input name="fname" type="text" placeholder="Frist Name" required>
                     </div>
                     <div class="field input">
                         <label for="">Last Name</label>
-                        <input type="text" placeholder="Last Name">
+                        <input name="lname" type="text" placeholder="Last Name" required>
                     </div>
                 </div>
                 <div class="field input">
                     <label for="">Email Address</label>
-                    <input type="text" placeholder="Enter your email">
+                    <input name="email" type="text" placeholder="Enter your email" required>
                 </div>
                 <div class="field input">
                     <label for="">Password</label>
-                    <input name="password" type="password" placeholder="Enter new password">
+                    <input name="password" type="password" placeholder="Enter new password" required>
                     <div class="when-click">
                         <i class="fas fa-eye"></i>
                     </div>
                 </div>
                 <div class="field image">
                     <label for="">Selet Img</label>
-                    <input type="file">
+                    <input name="image" type="file" required>
                 </div>
                 <div class="field button">
                     <input type="submit" value="Contine to chat">
                 </div>
             </form>
-            <div class="link">Already signed up? <a href="#">Login now</a></div>
+            <div class="link">Already signed up? <a href="login.php">Login now</a></div>
         </section>
     </div>
 
