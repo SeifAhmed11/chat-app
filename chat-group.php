@@ -14,20 +14,20 @@
             <?php 
                     include_once "php/config.php";
                     $user_id = mysqli_real_escape_string($conn, $_GET['user_id']);
-                    $sql = mysqli_query($conn, "SELECT * FROM users where unique_id = {$user_id}");
+                    $sql = mysqli_query($conn, "SELECT * FROM users where unique_id = 100");
                     if(mysqli_num_rows($sql) > 0){
                         $row = mysqli_fetch_assoc($sql);
                     }else
 
             ?>
                 <a href="user.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
-                <img src="image/<?php echo $row['img'] ?>" alt="">
+                <img src="image/download.png" alt="">
                     <div class="datails">
                         <span><?php echo $row['fname'] . " " . $row['lname'] ?></span>
                         <p><?php echo $row['status'] ?></p>
                 </div>
             </header>
-            <div class="chat-box">
+            <div class="chat-box2">
 
             </div>
             <form action="#" class="typing-area" autocomplete="off">
@@ -39,6 +39,6 @@
         </section>
     </div>
 
-    <script src="javascript/chat.js"></script>
+    <script src="javascript/chat-group.js"></script>
 </body>
 </html>

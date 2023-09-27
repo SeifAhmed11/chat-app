@@ -1,7 +1,7 @@
 const form = document.querySelector(".typing-area"),
       inputField = document.querySelector(".input-field"),
       sendBtn = document.querySelector("button"),
-      chatBox = document.querySelector(".chat-box");
+      chatBox2 = document.querySelector(".chat-box2");
 
 form.onsubmit = (e) => {
     e.preventDefault();
@@ -22,23 +22,24 @@ sendBtn.onclick = () => {
     xhr.send(formData);
 }
 
-chatBox.onmouseenter = () => {
-    chatBox.classList.add("active");
+chatBox2.onmouseenter = () => {
+    chatBox2.classList.add("active");
 }
 
-chatBox.onmouseleave = () => {
-    chatBox.classList.remove("active");
+chatBox2.onmouseleave = () => {
+    chatBox2.classList.remove("active");
 }
 
 setInterval( () =>{
     let xhr = new XMLHttpRequest();
-    xhr.open("post", "php/get-chat.php", true);
+    xhr.open("post", "php/group.php", true);
     xhr.onload = () => {
         if(xhr.readyState ===XMLHttpRequest.DONE){
             if(xhr.status === 200){
+                console.log("dsv");
                 let data = xhr.response;
-                chatBox.innerHTML = data;
-                if(!chatBox.classList.contains("active"))
+                chatBox2.innerHTML = data;
+                if(!chatBox2.classList.contains("active"))
                     scrollToBottom ();
             }
         }
@@ -47,6 +48,7 @@ setInterval( () =>{
     xhr.send(formData);
 },500 )
 
+
 function scrollToBottom (){
-    chatBox.scrollTop = chatBox.scrollHeight;
+    chatBox2.scrollTop = chatBox2.scrollHeight;
 }
