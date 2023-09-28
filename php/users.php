@@ -5,7 +5,7 @@
     $sql = mysqli_query($conn, "SELECT * FROM users where not (unique_id = {$outgoing_id}) and not (unique_id = 100)");
     $output = "";
 
-    if(mysqli_num_rows($sql) == 1){
+    if(mysqli_num_rows($sql) == 0){
         $output .="No users are available to chat";
     }
     elseif(mysqli_num_rows($sql) > 0){
