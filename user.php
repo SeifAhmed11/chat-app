@@ -37,7 +37,7 @@
                     <div class="content">
                         <img src="image/download.png" alt="">
                         <div class="datails">
-                            <span>group</span>
+                            <span>General group world</span>
                             <p>join</p>
                         </div>
                     </div>

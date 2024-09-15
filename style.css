@@ -273,6 +273,18 @@ form .name-details .field:last-child {
     margin-right: 15px;
 }
 
+.users-list2 {
+    /* background: #cae1f6; */
+    /* padding: 4px 0 0px 8px !important; */
+}
+
+.users-list2 a {
+    background: #cae1f6;
+    padding: 6px 0 6px 6px !important;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
 
 /* ***** *  USE THIS CLASS IN PHP WHEN OFFLINE  * ***** */
 
@@ -392,3 +404,4 @@ form .name-details .field:last-child {
     cursor: pointer;
     border-radius: 0 5px 5px 0;
 }
+
